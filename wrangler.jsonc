@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "internetcarpenter",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "internetcarpenter.com", "custom_domain": true },
+    { "pattern": "www.internetcarpenter.com", "custom_domain": true }
+  ]
+}
