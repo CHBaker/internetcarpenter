@@ -111,12 +111,27 @@
   .card { background: var(--card); border: 1px solid var(--rule); border-radius: 2px; padding: 1.2rem 1.3rem 1.3rem; }
   .card h3 { margin: 0 0 .5rem; font-family: var(--display); font-weight: 500; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; color: var(--num); }
   .card p { font-size: .95rem; color: var(--muted); }
-  .card .tag { display: inline-block; margin-bottom: .55rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--on-apricot); background: var(--apricot); padding: .1rem .5rem; border-radius: 2px; }
-  details.more { margin-top: .8rem; border-top: 1px solid var(--rule); padding-top: .6rem; }
-  details.more summary { cursor: pointer; font-weight: 600; font-size: .9rem; color: var(--accent); }
-  details.more h4 { margin: .9rem 0 .15rem; font-family: var(--mono); font-weight: 500; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-apricot); }
-  details.more p { font-size: .93rem; color: var(--ink); }
-  @media (min-width: 46rem) { .cards { grid-template-columns: repeat(2, 1fr); } .card.wide { grid-column: 1 / -1; } }
+  .tag { display: inline-block; margin-bottom: .55rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--on-apricot); background: var(--apricot); padding: .1rem .5rem; border-radius: 2px; }
+  .card { display: flex; flex-direction: column; }
+  .cards + .cards { margin-top: 1rem; }
+  .card p { margin-bottom: 1rem; }
+  .story-btn { margin-top: auto; padding: .6rem 0 0; background: none; border: 0; border-top: 1px solid var(--rule); width: 100%; text-align: left; font-weight: 600; font-size: .9rem; color: var(--accent); cursor: pointer; }
+  .story-btn::after { content: " →"; }
+  .story-btn:hover { text-decoration: underline; text-underline-offset: .18em; }
+  .story-src, .story-btn { display: none; }
+  .js .story-btn { display: block; }
+  html:not(.js) .story-src { display: block; margin-top: .6rem; }
+  .story-src h4, .dlg-body h4 { margin: 1rem 0 .15rem; font-family: var(--mono); font-weight: 500; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-apricot); }
+  .story-src p, .dlg-body p { font-size: .98rem; color: var(--ink); margin: 0; }
+
+  /* story dialog */
+  dialog.story { width: min(40rem, calc(100% - 2rem)); max-height: calc(100% - 3rem); padding: 0; border: 0; border-top: 5px solid var(--apricot); border-radius: 2px; background: var(--card); color: var(--ink); overflow: auto; }
+  dialog.story::backdrop { background: rgba(42, 10, 18, .7); }
+  .dlg-in { padding: 1.4rem 1.5rem 1.6rem; }
+  .dlg-in h3 { margin: .4rem 0 0; font-family: var(--display); font-weight: 500; font-size: 1.9rem; line-height: 1.05; text-transform: uppercase; color: var(--num); }
+  .dlg-close { float: right; margin: 0 0 .5rem 1rem; padding: .3rem .8rem; background: transparent; border: 1px solid var(--rule); border-radius: 2px; font-family: var(--mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); }
+  .dlg-close:hover { border-color: var(--num); }
+  @media (min-width: 46rem) { .cards { grid-template-columns: repeat(2, 1fr); } .cards.equal { grid-auto-rows: 1fr; } .card.wide { grid-column: 1 / -1; } }
   .results { margin-top: .8rem; display: grid; gap: .3rem; font-size: .93rem; }
   .results li { padding-left: 1.1rem; position: relative; }
   .results li::before { content: ""; position: absolute; left: 0; top: .62em; width: .5rem; height: 2px; background: var(--apricot); }
@@ -294,65 +309,60 @@
         <li>Delivered inside the cap, with a larger epic than first agreed, and a launch announced at the Sundance Film Festival.</li>
       </ul>
     </article>
+  </div>
+
+  <div class="cards equal">
 
     <article class="card">
       <span class="tag">Rescue</span>
       <h3>The invoice that nearly doubled</h3>
       <p>A hand-off pushed a client's invoice to roughly double the original bid. I found the cause, corrected the engineer's practice, set up billing controls, and negotiated the resolution.</p>
-      <details class="more">
-        <summary>Read the story</summary>
-        <h4>The situation</h4>
+      <div class="story-src"><h4>The situation</h4>
         <p>The client had a small budget and was billed ticket by ticket. An engineer who took over another engineer's work ran well over the original bid. The invoice came in at roughly twice what we had quoted, and the client was shocked.</p>
         <h4>What I did</h4>
         <p>I started by finding out why, before anyone argued about money. The cause was how the engineer who took over was working, so I corrected that practice. Then I set up billing controls for that client so a surprise like that could not happen again. Last, I sat down with the client and their project manager, negotiated a reduced invoice, and walked them through the reasoning behind the part that stayed.</p>
         <h4>How it ended</h4>
-        <p>The client's trust came back, and it did not happen again. They went on to do two more feature cycles and later signed a quarter-long engagement.</p>
-      </details>
+        <p>The client's trust came back, and it did not happen again. They went on to do two more feature cycles and later signed a quarter-long engagement.</p></div>
+      <button class="story-btn" type="button">Read the story</button>
     </article>
 
     <article class="card">
       <span class="tag">Rescue</span>
       <h3>Modernizing legacy customer flows</h3>
       <p>Augmented a large enterprise client's team to modernize legacy customer flows. I added test coverage to stabilize the app and mentored the client's engineers.</p>
-      <details class="more">
-        <summary>Read the story</summary>
-        <h4>The situation</h4>
+      <div class="story-src"><h4>The situation</h4>
         <p>A large enterprise client had customer flows built on legacy code, and the app was unstable. Their front end was Angular.</p>
         <h4>What I did</h4>
         <p>We augmented the client's team to modernize those flows. I added test coverage to stabilize the app, and I mentored the client's engineers as we went.</p>
         <h4>How it ended</h4>
-        <p>The app was stabilized, the flows were modernized, and the client's engineers were mentored through the work.</p>
-      </details>
+        <p>The app was stabilized, the flows were modernized, and the client's engineers were mentored through the work.</p></div>
+      <button class="story-btn" type="button">Read the story</button>
     </article>
 
     <article class="card">
       <span class="tag">Audit</span>
       <h3>Handoffs and audits</h3>
       <p>When full-time staff rolled off a client project, I led the AWS and infrastructure handoff and kept delivery steady. Separately, I audited another client team's productivity and infrastructure and presented my recommendations to leadership.</p>
-      <details class="more">
-        <summary>Read the story</summary>
-        <h4>The handoff</h4>
+      <div class="story-src"><h4>The handoff</h4>
         <p>When the full-time staff on a client project rolled off, I led the AWS and infrastructure handoff. Leadership was away while it happened, so I kept delivery steady through it.</p>
         <h4>The audit</h4>
         <p>On another client's engineering team, I audited both productivity and infrastructure, then presented my recommendations to leadership.</p>
         <h4>How they ended</h4>
-        <p>The handoff landed without delivery slipping, and the audit ended in recommendations that went in front of leadership.</p>
-      </details>
+        <p>The handoff landed without delivery slipping, and the audit ended in recommendations that went in front of leadership.</p></div>
+      <button class="story-btn" type="button">Read the story</button>
     </article>
 
     <article class="card">
       <span class="tag">Build</span>
       <h3>Pre-sales and pricing</h3>
       <p>On pre-sales calls I cover demos, discovery, feasibility, and early architecture, then size the solution and the price to fit.</p>
-      <details class="more">
-        <summary>Read the story</summary>
-        <h4>How I work a pre-sales call</h4>
+      <div class="story-src"><h4>How I work a pre-sales call</h4>
         <p>I cover the demo, discovery, feasibility, and early architecture, then size the solution and the price to fit.</p>
         <h4>The clearest example</h4>
         <p>On the streaming platform above, the client wanted to work with us but hesitated on cost. I fit the scope to a negotiated cap and kept the cap visible, so every trade-off could be argued in the open.</p>
         <h4>How it ended</h4>
-        <p>We delivered inside the cap, with a larger epic than we first agreed, while absorbing changes of direction along the way.</p>
-      </details>
+        <p>We delivered inside the cap, with a larger epic than we first agreed, while absorbing changes of direction along the way.</p></div>
+      <button class="story-btn" type="button">Read the story</button>
     </article>
   </div>
 </section>
@@ -395,6 +405,16 @@
   </div>
 </section>
 </main>
+
+<dialog id="story" class="story" aria-labelledby="story-title">
+  <div class="dlg-in">
+    <button class="dlg-close" type="button" id="story-close">Close</button>
+    <span class="tag" id="story-tag"></span>
+
+    <h3 id="story-title"></h3>
+    <div class="dlg-body" id="story-body"></div>
+  </div>
+</dialog>
 
 <footer>
   <svg class="ruler" aria-hidden="true" width="100%" height="26" style="transform: scaleY(-1)"><rect width="100%" height="26" fill="url(#ticks)"></rect></svg>
@@ -443,6 +463,26 @@
         .catch(function () { cSay("That did not go through. You can email internetcarpenter@protonmail.com directly.", "err"); })
         .then(function () { cSend.disabled = false; if (tsKey && window.turnstile) { window.turnstile.reset(); tsToken = ""; } });
     });
+  }
+
+  /* proof stories open in a dialog, so every card keeps the same height */
+  var sdlg = document.getElementById("story");
+  if (sdlg && sdlg.showModal) {
+    Array.prototype.forEach.call(document.querySelectorAll(".story-btn"), function (b) {
+      b.addEventListener("click", function () {
+        var card = b.closest(".card");
+        document.getElementById("story-tag").textContent = card.querySelector(".tag").textContent;
+        document.getElementById("story-title").textContent = card.querySelector("h3").textContent;
+        document.getElementById("story-body").innerHTML = card.querySelector(".story-src").innerHTML;
+        sdlg.showModal();
+        sdlg.scrollTop = 0;
+      });
+    });
+    document.getElementById("story-close").addEventListener("click", function () { sdlg.close(); });
+    sdlg.addEventListener("click", function (e) { if (e.target === sdlg) sdlg.close(); });
+  } else {
+    /* no dialog support: show the stories inline */
+    doc.classList.remove("js");
   }
 
   /* scroll reveal: show a section once its top is near the viewport; never leave one hidden */
