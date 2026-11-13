@@ -11,7 +11,7 @@
 // Layers, cheapest first: same-site check, per-visitor rate limit, hidden field and minimum
 // fill time, field validation, Turnstile, then the send.
 
-const DEFAULT_TO = "internetcarpenter@protonmail.com";
+const DEFAULT_TO = "charlesprobaker@gmail.com";
 const DEFAULT_FROM = "Internet Carpenter site <hello@longbow.fit>";
 const MIN_FILL_MS = 2500; // a human takes longer than this to fill the form
 
