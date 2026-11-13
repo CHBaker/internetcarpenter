@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Internet Carpenter | Application rescue, audits, and builds</title>
-<meta name="description" content="Senior engineering help on contract: rescue a troubled application, audit an architecture or your AI use, evaluate a team, or build something new. Run by Charles Hudson Baker.">
+<title>Internet Carpenter | AI pipeline audits and delivery</title>
+<meta name="description" content="AI pipeline integration and delivery audits for engineering teams that already have senior engineers: find the gaps and bottlenecks, plan the architecture, and get to a launch you are ready for. Founded by Charles Hudson Baker.">
 <meta name="author" content="Charles Hudson Baker">
 <link rel="canonical" href="https://internetcarpenter.com/">
 <meta name="theme-color" content="#5E1224" media="(prefers-color-scheme: light)">
@@ -13,12 +13,12 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Internet Carpenter">
-<meta property="og:title" content="Internet Carpenter | Application rescue, audits, and builds">
-<meta property="og:description" content="Senior engineering help on contract: rescue, audit, evaluate, build.">
+<meta property="og:title" content="Internet Carpenter | AI pipeline audits and delivery">
+<meta property="og:description" content="AI pipeline audits, delivery and CI reliability, production stability, and launch readiness for teams with senior engineers.">
 <meta property="og:url" content="https://internetcarpenter.com/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Internet Carpenter | Application rescue, audits, and builds">
-<meta name="twitter:description" content="Senior engineering help on contract: rescue, audit, evaluate, build.">
+<meta name="twitter:title" content="Internet Carpenter | AI pipeline audits and delivery">
+<meta name="twitter:description" content="AI pipeline audits, delivery and CI reliability, production stability, and launch readiness for teams with senior engineers.">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Internet Carpenter","url":"https://internetcarpenter.com/","description":"Application rescue, architecture and AI audits, engineering team evaluation, and product builds on contract.","founder":{"@type":"Person","name":"Charles Hudson Baker"},"areaServed":"US","email":"internetcarpenter@protonmail.com"}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Internet Carpenter","url":"https://internetcarpenter.com/","description":"AI pipeline integration audits, delivery and CI reliability, production stability, launch readiness, and team augmentation for engineering teams.","founder":{"@type":"Person","name":"Charles Hudson Baker"},"areaServed":"US","email":"internetcarpenter@protonmail.com"}
 </script>
 
 <style>
@@ -62,6 +62,8 @@
   .nav { position: sticky; top: 0; z-index: 20; background: var(--ox); color: var(--on-ox); border-bottom: 1px solid rgba(255, 255, 255, .14); }
   .nav .wrap { display: flex; align-items: center; gap: 1.4rem; min-height: 3.4rem; }
   .brand { font-family: var(--display); font-weight: 500; font-size: 1.4rem; letter-spacing: .03em; text-transform: uppercase; color: var(--on-ox); text-decoration: none; margin-right: auto; white-space: nowrap; }
+  .brand { display: block; line-height: 1; padding: .55rem 0; }
+  .brand small { display: block; margin-top: .28rem; font-family: var(--mono); font-weight: 400; font-size: .56rem; letter-spacing: .12em; text-transform: uppercase; color: var(--apricot); }
   .nav a.l { color: var(--on-ox); text-decoration: none; font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; }
   .nav a.l:hover { color: var(--apricot); }
   @media (max-width: 44rem) { .nav a.l.opt { display: none; } .nav .wrap { gap: .9rem; } .brand { font-size: 1.1rem; } }
@@ -72,6 +74,8 @@
   h1 { margin: .7rem 0 1.3rem; font-family: var(--display); font-weight: 500; font-size: clamp(2.7rem, 10.5vw, 7.4rem); line-height: .95; letter-spacing: -.01em; text-transform: uppercase; color: var(--on-ox); }
   h1 em { font-style: normal; color: var(--apricot); }
   .hero-line { max-width: 31em; font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.35; font-weight: 500; }
+  .focus { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .focus li { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--on-ox); border: 1px solid rgba(255, 255, 255, .35); border-radius: 2px; padding: .3rem .65rem; }
   .tagline { margin-top: 1.1rem; font-style: italic; color: var(--apricot); }
   .cta { margin: 2rem 0 3rem; display: flex; flex-wrap: wrap; gap: .7rem; }
   .btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: .95rem; padding: .6rem 1.2rem; border-radius: 2px; border: 1px solid var(--apricot); font-family: var(--sans); }
@@ -139,8 +143,6 @@
   /* about */
   .about { display: grid; gap: 1.2rem; }
   .about p { max-width: 40rem; }
-  .about .sign { font-family: var(--display); text-transform: uppercase; font-size: 1.5rem; color: var(--num); line-height: 1.1; }
-  .about .sign small { display: block; font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; color: var(--muted); margin-top: .2rem; }
 
   /* contact */
   .contact-grid { display: grid; gap: 1.6rem; }
@@ -190,7 +192,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Internet Carpenter</a>
+    <a class="brand" href="#top">Internet Carpenter<small>Founded by Charles Hudson Baker</small></a>
     <a class="l opt" href="#work">What I do</a>
     <a class="l opt" href="#how">How it works</a>
     <a class="l opt" href="#proof">Proof</a>
@@ -201,12 +203,19 @@
 <main id="main">
 <section class="hero" id="top">
   <div class="wrap">
-    <p class="eyebrow">Contract engineering. Rescue, audit, evaluate, build.</p>
+    <p class="eyebrow">AI pipeline integration. Delivery audits. Launch readiness.</p>
     <h1>Measure twice.<br><em>Then fix it.</em></h1>
-    <p class="hero-line">Senior engineering help for teams that have a product problem and no senior leader to own it. I take over a troubled application, audit what you have, size up your team, or build the thing from scratch.</p>
+    <p class="hero-line">I audit how AI fits into your engineering pipeline, find the gaps and bottlenecks, and plan the architecture that removes them. For teams that already have senior engineers and want more throughput, steadier CI, safer production, and a launch they are ready for.</p>
+    <ul class="focus" aria-label="Focus areas">
+      <li>AI automation</li>
+      <li>Throughput and code delivery</li>
+      <li>CI reliability</li>
+      <li>Production stability</li>
+      <li>Market launch readiness</li>
+    </ul>
     <p class="tagline">Eternally optimistic. Delusionally formidable.</p>
     <div class="cta">
-      <a class="btn p" href="#contact">Tell me what is wrong</a>
+      <a class="btn p" href="#contact">Book an audit call</a>
       <a class="btn s" href="#work">See what I do</a>
     </div>
   </div>
@@ -216,67 +225,67 @@
 <section class="sec wrap reveal" id="work">
   <h2>What I do</h2>
   <svg class="ruler rule" aria-hidden="true" width="100%" height="26"><rect width="100%" height="26" fill="url(#ticks-ox)"></rect></svg>
-  <p class="intro">Five jobs, all on contract. Most start with a look at what is there, because the right fix is rarely the one anyone first guessed.</p>
+  <p class="intro">Five jobs, all on contract, aimed at teams that already have strong engineers and want the pipeline around them to work as hard as they do. Most start with a look at what is there, because the right fix is rarely the one anyone first guessed.</p>
 
   <div class="offers">
     <article class="offer">
-      <span class="n">01 / Rescue</span>
-      <h3>Application rescue</h3>
-      <p class="for">For an app that is unstable, stalled, or handed over by a team that has moved on.</p>
+      <span class="n">01 / AI pipeline</span>
+      <h3>AI pipeline audit and architecture</h3>
+      <p class="for">For a team that uses AI, or has been told to, and wants it to raise throughput without raising risk.</p>
       <ul>
-        <li>Find out why it breaks before anyone starts rewriting.</li>
-        <li>Add the tests and standards that hold it steady.</li>
-        <li>Hand back working software and a team that can keep it that way.</li>
+        <li>Map where AI touches design, coding, review, testing, and release, and what each use costs.</li>
+        <li>Find the gaps and bottlenecks, then plan the pipeline architecture and the automation that removes them.</li>
+        <li>Draw the governance lines: who owns AI-assisted work, and who answers when it goes wrong.</li>
+      </ul>
+      <p class="proof"><b>Proof</b>Co-led a company-wide rollout of AI-assisted development: ran the pilots, wrote the evaluation reports, and wrote the AI usage policy. By our own sprint measure, one team's velocity roughly doubled after the rollout. Authored a phased agent adoption plan for a SOC 2-bound company.</p>
+    </article>
+
+    <article class="offer">
+      <span class="n">02 / Delivery</span>
+      <h3>Delivery, CI, and production audit</h3>
+      <p class="for">For a team that ships, but not as fast or as steadily as its engineers should allow.</p>
+      <ul>
+        <li>Trace how code gets from a pull request to production: review, tests, CI, release, rollback.</li>
+        <li>Find what slows throughput, what makes CI unreliable, and what threatens production stability.</li>
+        <li>Written findings, ranked by what to fix first, presented to leadership.</li>
+      </ul>
+      <p class="proof"><b>Proof</b>Audited a client engineering team's productivity and infrastructure and presented the recommendations to their leadership. Wrote engineering process policies covering pull-request and merge review, QA, production rollbacks, and Git hooks.</p>
+    </article>
+
+    <article class="offer">
+      <span class="n">03 / Opening day</span>
+      <h3>Launch readiness</h3>
+      <p class="for">For a product heading to market that needs the delivery side to be ready on the day.</p>
+      <ul>
+        <li>Release management, checkpoints, and demos that keep a launch date honest.</li>
+        <li>Scope and price held to a cap, with trade-offs argued in the open.</li>
+        <li>A short list of what must be true before launch, and who owns each item.</li>
+      </ul>
+      <p class="proof"><b>Proof</b>Led a three-engineer team that shipped three apps in six months inside a negotiated budget cap, for a launch announced at the Sundance Film Festival.</p>
+    </article>
+
+    <article class="offer">
+      <span class="n">04 / Rescue</span>
+      <h3>Hands-on fixes and rescue</h3>
+      <p class="for">For the problem an audit turns up, or an app that has gone unstable.</p>
+      <ul>
+        <li>I can fix what I find, not just report it.</li>
+        <li>Stabilize with tests and standards, and leave the team able to keep it that way.</li>
+        <li>Take over a stalled build and hand back working software.</li>
       </ul>
       <p class="proof"><b>Proof</b>Stabilized a high-volume point-of-sale app after critical failures. Modernized legacy customer flows for a large enterprise client by adding test coverage and mentoring their engineers.</p>
     </article>
 
-    <article class="offer">
-      <span class="n">02 / Inspection</span>
-      <h3>Architecture and code audit</h3>
-      <p class="for">For a codebase, an infrastructure setup, or a delivery process you do not fully trust.</p>
+    <article class="offer wide">
+      <span class="n">05 / Crew</span>
+      <h3>Team augmentation and evaluation</h3>
+      <p class="for">For a team that needs another senior pair of hands, an embedded lead, or a straight read on the team before a big decision.</p>
       <ul>
-        <li>Review the architecture, the infrastructure, and how work actually ships.</li>
-        <li>Written findings, ranked by what to fix first.</li>
-        <li>Presented to your leadership, in plain language.</li>
-      </ul>
-      <p class="proof"><b>Proof</b>Audited a client engineering team's productivity and infrastructure and presented the recommendations to their leadership. Ran code quality audits and fed the incident reports back into delivery.</p>
-    </article>
-
-    <article class="offer">
-      <span class="n">03 / AI audit</span>
-      <h3>AI audit and adoption plan</h3>
-      <p class="for">For a company with an AI mandate and no plan, or AI already in use and no rules.</p>
-      <ul>
-        <li>Inventory where AI is used, what it costs, and what is governed.</li>
-        <li>A phased adoption plan with compliance boundaries drawn in.</li>
-        <li>The policy: who owns AI-assisted work, and who answers when it goes wrong.</li>
-      </ul>
-      <p class="proof"><b>Proof</b>Co-led a company-wide rollout of AI-assisted development: ran the pilots, wrote the evaluation reports, and wrote the AI usage policy and engineering process policies. Authored a phased agent adoption plan for a SOC 2-bound company.</p>
-    </article>
-
-    <article class="offer">
-      <span class="n">04 / Evaluation</span>
-      <h3>Team and engineer evaluation</h3>
-      <p class="for">For a leader who needs a straight read on a team, or on a person, before a big decision.</p>
-      <ul>
-        <li>Assess how a team delivers: capacity, process, and where it stalls.</li>
-        <li>Evaluate individual engineers fairly, against clear expectations.</li>
+        <li>Augment your team with an engineer or a technical lead, including hiring and staffing plans.</li>
+        <li>Assess how a team delivers, and evaluate individual engineers fairly against clear expectations.</li>
         <li>Advise on performance, promotion, and hiring, with the reasoning written down.</li>
       </ul>
-      <p class="proof"><b>Proof</b>Led up to 13 engineers through quarterly reviews and performance interventions, made promotion calls, and made hiring decisions. Owned staffing and capacity against the contract roadmap.</p>
-    </article>
-
-    <article class="offer wide">
-      <span class="n">05 / Framing</span>
-      <h3>Build and fractional lead</h3>
-      <p class="for">For a new product that needs a plan and a crew, or a team that needs a lead until it can hire one.</p>
-      <ul>
-        <li>Scope, architecture, and a small team to ship it, on a capped budget or a time-boxed cadence.</li>
-        <li>Or an embedded technical lead or engineering manager: hiring, staffing, process, reviews.</li>
-        <li>Pre-sales help too: demos, discovery, feasibility, and a price sized to the scope.</li>
-      </ul>
-      <p class="proof"><b>Proof</b>Led a three-engineer team that shipped three apps in six months for a startup, inside a negotiated budget cap. Ran up to five client engagements at once.</p>
+      <p class="proof"><b>Proof</b>Led up to 13 engineers through quarterly reviews and performance interventions, made promotion and hiring calls, and owned staffing against the contract roadmap. Ran up to five client engagements at once.</p>
     </article>
   </div>
 </section>
@@ -371,10 +380,9 @@
   <h2>Who you get</h2>
   <svg class="ruler rule" aria-hidden="true" width="100%" height="26"><rect width="100%" height="26" fill="url(#ticks-ox)"></rect></svg>
   <div class="about">
-    <p>Internet Carpenter is Charles Hudson Baker, an engineering leader who has spent the past 7 years leading client project teams and the engineers on them. I started as the tech lead on the work itself, so I can read your code and your people.</p>
+    <p>I am an engineering leader and AI engineer. For the past 7 years I have led client project teams and the engineers on them, starting as the tech lead on the work itself, so I can read your pipeline, your code, and your people.</p>
     <p>I work in plain English, I show my reasoning, and I tell you which problems are worth money and which are not. When the job is done, you keep the work and the knowledge.</p>
     <p>I also build Longbow, a training app, so I know the full-stack grind from the founder's side.</p>
-    <p class="sign">Charles Hudson Baker<small>Founder, Internet Carpenter LLC. Colorado Springs, CO. Remote.</small></p>
   </div>
 </section>
 
@@ -383,7 +391,7 @@
   <svg class="ruler rule" aria-hidden="true" width="100%" height="26"><rect width="100%" height="26" fill="url(#ticks-ox)"></rect></svg>
   <div class="contact-grid">
     <div>
-      <p class="contact-lead">Tell me what is broken, stalled, or about to be built. I will tell you honestly whether I can help.</p>
+      <p class="contact-lead">Tell me where your pipeline slows down, or what launch is coming. I will tell you honestly whether I can help.</p>
       <p class="note">Send a note here and it lands in my inbox. I write back myself, usually within a business day.</p>
       <ul class="direct">
         <li><a href="mailto:internetcarpenter@protonmail.com">internetcarpenter@protonmail.com</a></li>
@@ -395,8 +403,8 @@
       <input id="cf-name" name="name" autocomplete="name" required maxlength="100">
       <label for="cf-email">Email</label>
       <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200">
-      <label for="cf-msg">What do you need?</label>
-      <textarea id="cf-msg" name="message" rows="6" required maxlength="5000" placeholder="The problem, the team, and when you need it solved."></textarea>
+      <label for="cf-msg">What is going on?</label>
+      <textarea id="cf-msg" name="message" rows="6" required maxlength="5000" placeholder="Your team, where delivery slows down, and what is coming up."></textarea>
       <div class="hp" aria-hidden="true"><label>Leave this empty<input tabindex="-1" autocomplete="off" name="website"></label></div>
       <div id="cf-ts" class="ts-slot"></div>
       <button class="btn p" type="submit" id="cf-send">Send</button>
@@ -419,7 +427,7 @@
 <footer>
   <svg class="ruler" aria-hidden="true" width="100%" height="26" style="transform: scaleY(-1)"><rect width="100%" height="26" fill="url(#ticks)"></rect></svg>
   <div class="wrap">
-    <p><a href="https://chbdev.com">Hiring a full-time engineering leader? See Charles's personal site.</a></p>
+    <p><a href="https://chbdev.com">Hiring a full-time engineering leader? Take a look at my personal site.</a></p>
     <p class="fine">Internet Carpenter LLC. Colorado Springs, CO. Remote.</p>
   </div>
 </footer>
