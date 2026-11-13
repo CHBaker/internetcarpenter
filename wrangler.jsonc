@@ -1,11 +1,21 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "internetcarpenter",
+  "main": "src/worker.js",
   "compatibility_date": "2025-10-01",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
   },
+  "ratelimits": [
+    {
+      "name": "CONTACT_LIMIT",
+      "namespace_id": "1002",
+      "simple": { "limit": 3, "period": 60 }
+    }
+  ],
   "routes": [
     { "pattern": "internetcarpenter.com", "custom_domain": true },
     { "pattern": "www.internetcarpenter.com", "custom_domain": true }
