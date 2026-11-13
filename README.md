@@ -2,9 +2,8 @@
 
 Internet Carpenter LLC's contracting site, to be served at https://internetcarpenter.com. Plain static files, no build step.
 
-Deployed by Cloudflare Workers Builds (static assets) connected to this repo: every push to `main` redeploys.
-The site files live in `public/`; `wrangler.jsonc` points at them and attaches the custom domains.
-Build settings in the dashboard: build command empty, deploy command `npx wrangler deploy`, root directory `/`. The Worker name must be `internetcarpenter`.
+Deploys are by hand: the Worker is not connected to Git (the deployment history shows Source: Upload), so a push does not go live. From this folder run `git pull --ff-only`, then `npx wrangler deploy`. Production deploys are Hudson's to run.
+The site files live in `public/`; `wrangler.jsonc` points at them, runs the Worker for `/api/*`, and attaches the custom domains. The Worker name must be `internetcarpenter`.
 
 ## The site (2026-11-13)
 
