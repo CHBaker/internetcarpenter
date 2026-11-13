@@ -78,6 +78,12 @@
   .focus { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .55rem 0; padding: .85rem 0; }
   .focus li { display: inline-flex; align-items: center; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(247, 244, 242, .88); }
   .focus li:not(:last-child)::after { content: ""; display: inline-block; width: .5rem; height: .95rem; margin: 0 .95rem; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 420'%3E%3Cpath d='M118 6 L34 226 L96 226 L64 410 L182 154 L116 154 L158 6 Z' fill='%23FFB86B'/%3E%3C/svg%3E") center / contain no-repeat; }
+  /* desktop: one line, scaled to fit the width */
+  @media (min-width: 48rem) {
+    .focus { flex-wrap: nowrap; }
+    .focus li { white-space: nowrap; font-size: clamp(.5rem, 1.1vw, .68rem); }
+    .focus li:not(:last-child)::after { width: clamp(.34rem, .6vw, .5rem); height: clamp(.7rem, 1.2vw, .95rem); margin: 0 clamp(.5rem, 1.3vw, .95rem); }
+  }
   @media (max-width: 40rem) {
     .focus { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: .5rem 0; }
     .focus li { font-size: .64rem; }
